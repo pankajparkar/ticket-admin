@@ -11,7 +11,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./movie-detail.component.sass']
 })
 export class MovieDetailComponent implements OnInit {
-  movie!: Movie;
+  movieId = +this.route.snapshot.paramMap.get('id')!;
+  movie$ = this.db.getMovie(this.movieId);
   showAllTimes = false;
   modalRef!: BsModalRef;
 
@@ -22,13 +23,6 @@ export class MovieDetailComponent implements OnInit {
     private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.getMovie();
-  }
-
-  getMovie(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
-
-    this.db.getMovie(id).subscribe(movie => this.movie = movie);
   }
 
   // show all showtimes
@@ -41,17 +35,14 @@ export class MovieDetailComponent implements OnInit {
     this.showAllTimes = false;
   }
 
-  getBackdropUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(this.movie.backdrop);
-  }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
     this.modalRef.setClass('modal-lg');
   }
 
-  getPreviewUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(this.getEmbedUrl(this.movie.trailer));
+  getPreviewUrl(trailer: string) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.getEmbedUrl(trailer));
   }
 
   getEmbedUrl(url: string) {

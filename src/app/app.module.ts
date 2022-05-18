@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './component/movies/movies.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
-import { FrontpageComponent } from './component/frontpage/frontpage.component';
+import { HomeComponent } from './component/home/home.component';
 import { JoinPipe } from './pipe/join.pipe';
 import { MinutePipe } from './pipe/minute.pipe';
 import { ShowtimesComponent } from './component/showtimes/showtimes.component';
@@ -27,7 +27,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AppComponent,
     MoviesComponent,
     MovieDetailComponent,
-    FrontpageComponent,
+    HomeComponent,
     ShowtimesComponent,
     JoinPipe,
     MinutePipe,
