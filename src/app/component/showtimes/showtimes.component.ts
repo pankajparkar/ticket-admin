@@ -12,21 +12,18 @@ export class ShowtimesComponent implements OnInit, OnChanges {
   @Input() movie!: Movie;
   @Input() showAllTimes = false;
   @Input() filterDate: string = '';
-  showtimes: ShowtimeDate[] = [];
+  showtimes$ = this.db.getMovieShowtimes(this.movie, this.filterDate, this.showAllTimes);
 
-  constructor(private db: DatabaseService) { }
+  constructor(
+    private db: DatabaseService,
+  ) { }
 
   ngOnInit() {
-    this.getShowtimes();
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['showAllTimes']) {
-      this.getShowtimes();
-    }
-  }
-
-  getShowtimes(): void {
-    this.db.getMovieShowtimes(this.movie, this.filterDate, this.showAllTimes).subscribe(showtimes => this.showtimes = showtimes);
+    // if (changes['showAllTimes']) {
+    //   this.getShowtimes();
+    // }
   }
 }

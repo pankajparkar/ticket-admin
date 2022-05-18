@@ -9,15 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MoviesSliderComponent implements OnInit {
   @Input() limit!: number;
-  movies: Movie[] = [];
+  movies$ = this.db.getMovies(this.limit);
 
-  constructor(private db: DatabaseService) { }
+  constructor(
+    private db: DatabaseService,
+  ) { }
 
   ngOnInit() {
-    this.getMovies();
-  }
-
-  getMovies() {
-    this.db.getMovies(this.limit).subscribe(movies => this.movies = movies);;
   }
 }

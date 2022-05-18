@@ -13,19 +13,17 @@ export class MoviesGridComponent implements OnInit {
   @Input() limit!: number;
   @Input() columns!: number;
   @Input() exclude?: number | number[];
-  movies!: Movie[];
+  movies$ = this.db.getMovies(this.limit, this.exclude);
   modalRef: BsModalRef | undefined;
   previewUrl = '';
 
-  constructor(private db: DatabaseService, private modalService: BsModalService, private sanitizer: DomSanitizer) { }
+  constructor(
+    private db: DatabaseService,
+    private modalService: BsModalService,
+    private sanitizer: DomSanitizer,
+  ) { }
 
-  ngOnInit() {
-    this.getMovies();
-  }
-
-  getMovies() {
-    this.db.getMovies(this.limit, this.exclude).subscribe(movies => this.movies = movies);;
-  }
+  ngOnInit() { }
 
   openModal(template: TemplateRef<any>, previewUrl: string) {
     this.previewUrl = previewUrl;

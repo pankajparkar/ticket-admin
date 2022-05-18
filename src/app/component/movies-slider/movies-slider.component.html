@@ -1,5 +1,5 @@
 <carousel class="movies-slider-container">
-  <slide *ngFor="let movie of movies">
+  <slide *ngFor="let movie of movies$ | async">
     <img src="{{ movie.backdrop }}" alt="{{ movie.title }}">
     <div class="carousel-caption d-none d-md-block">
       <h3><a routerLink="/movie/{{ movie.id }}">{{ movie.title }}</a></h3>
