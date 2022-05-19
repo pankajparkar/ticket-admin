@@ -18,7 +18,9 @@ export class MovieSearchComponent implements OnInit {
     switchMap((term: string) => this.db.searchMovies(term))
   );
 
-  constructor(private db: DatabaseService) { }
+  constructor(
+    private db: DatabaseService,
+  ) { }
 
   ngOnInit() {
   }
