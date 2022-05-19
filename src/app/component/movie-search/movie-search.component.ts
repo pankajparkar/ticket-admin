@@ -1,5 +1,5 @@
 import { DatabaseService } from './../../service/database.service';
-import { Movie } from './../../interface/movie';
+import { Movie } from '../../models/movie';
 import { Observable, Subject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';

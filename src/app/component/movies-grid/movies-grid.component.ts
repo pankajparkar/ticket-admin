@@ -1,4 +1,4 @@
-import { Movie } from './../../interface/movie';
+import { Movie } from '../../models/movie';
 import { DatabaseService } from './../../service/database.service';
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';

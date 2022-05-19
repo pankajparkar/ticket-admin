@@ -1,5 +1,5 @@
 import { DatabaseService } from './../../service/database.service';
-import { Movie } from './../../interface/movie';
+import { Movie } from '../../models/movie';
 import { Component, OnInit, Input, SimpleChanges, OnChanges, TemplateRef } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';

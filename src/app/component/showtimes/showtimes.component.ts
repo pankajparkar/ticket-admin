@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, SimpleChange, SimpleChanges, OnChanges, ChangeDetectionStrategy } from '@angular/core';
-import { Movie } from '../../interface/movie';
+import { Movie } from '../../models/movie';
 import { DatabaseService } from '../../service/database.service';
-import { ShowtimeDate } from 'src/app/interface/showtime-date';
+import { ShowtimeDate } from 'src/app/models/showtime-date';
 
 @Component({
   selector: 'bmc-showtimes',

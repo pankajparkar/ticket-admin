@@ -1,9 +1,9 @@
-import { Showtime } from './../interface/showtime';
+import { Showtime } from '../models/showtime';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 // import mockData from './mock-data.json';
-import { Database } from '../interface/database';
-import { ShowtimeDate } from '../interface/showtime-date';
+import { Database } from '../models/database';
+import { ShowtimeDate } from '../models/showtime-date';
 
 @Injectable({
   providedIn: 'root'

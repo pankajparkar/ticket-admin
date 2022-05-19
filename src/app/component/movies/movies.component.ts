@@ -1,4 +1,4 @@
-import { FilterDate } from './../../interface/filter-date';
+import { FilterDate } from '../../models/filter-date';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

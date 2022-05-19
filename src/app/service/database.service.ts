@@ -1,9 +1,9 @@
-import { ShowtimeDate } from './../interface/showtime-date';
+import { ShowtimeDate } from '../models/showtime-date';
 import { Observable, of } from 'rxjs';
 import { map, catchError, switchMap, concatMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { Movie } from './../interface/movie';
-import { Showtime } from './../interface/showtime';
+import { Movie } from '../models/movie';
+import { Showtime } from '../models/showtime';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

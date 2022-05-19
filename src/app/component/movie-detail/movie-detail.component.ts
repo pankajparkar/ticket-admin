@@ -1,4 +1,4 @@
-import { Movie } from './../../interface/movie';
+import { Movie } from '../../models/movie';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { DatabaseService } from './../../service/database.service';
