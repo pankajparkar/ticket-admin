@@ -31,6 +31,7 @@ import { VerticalBarChartComponent } from './components/charts/vertical-bar-char
 import { NumberChartComponent } from './components/charts/number-chart/number-chart.component';
 import { MovieDetailsCardComponent } from './components/movie-details-card/movie-details-card.component';
 import { GoldenTextComponent } from './components/golden-text/golden-text.component';
+import { MoviePreviewCardComponent } from './components/movie-preview-card/movie-preview-card.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { GoldenTextComponent } from './components/golden-text/golden-text.compon
     NumberChartComponent,
     MovieDetailsCardComponent,
     GoldenTextComponent,
+    MoviePreviewCardComponent,
   ],
   imports: [
     BrowserModule,

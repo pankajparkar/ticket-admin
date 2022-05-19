@@ -1,21 +1,19 @@
-import { Movie } from '../../models/movie';
 import { DatabaseService } from './../../service/database.service';
-import { Component, OnInit, Input, TemplateRef } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { Component, OnInit, Input, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'bmc-movies-grid',
   templateUrl: './movies-grid.component.html',
-  styleUrls: ['./movies-grid.component.sass']
+  styleUrls: ['./movies-grid.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MoviesGridComponent implements OnInit {
   @Input() limit!: number;
   @Input() columns!: number;
   @Input() exclude?: number | number[];
   movies$ = this.db.getMovies(this.limit, this.exclude);
-  modalRef: BsModalRef | undefined;
-  previewUrl = '';
 
   constructor(
     private db: DatabaseService,
@@ -25,17 +23,4 @@ export class MoviesGridComponent implements OnInit {
 
   ngOnInit() { }
 
-  openModal(template: TemplateRef<any>, previewUrl: string) {
-    this.previewUrl = previewUrl;
-    this.modalRef = this.modalService.show(template);
-    this.modalRef.setClass('modal-lg');
-  }
-
-  getPreviewUrl() {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(this.previewUrl);
-  }
-
-  getEmbedUrl(url: string) {
-    return url.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/');
-  }
 }
