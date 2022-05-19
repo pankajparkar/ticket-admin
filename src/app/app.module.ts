@@ -6,15 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { HomeComponent } from './components/home/home.component';
-import { JoinPipe } from './pipes/join.pipe';
-import { MinutePipe } from './pipes/minute.pipe';
-import { DayPipe } from './pipes/day.pipe';
 import { DatabaseService } from './service/database.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { SafePipe } from './pipes/safe.pipe';
 
 import { MoviesSliderComponent } from './components/movies-slider/movies-slider.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -25,17 +21,14 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VerticalBarChartComponent } from './components/charts/vertical-bar-chart/vertical-bar-chart.component';
 import { NumberChartComponent } from './components/charts/number-chart/number-chart.component';
 import { SharedModule } from './shared/shared.module';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
     HomeComponent,
-    JoinPipe,
-    MinutePipe,
-    DayPipe,
     MoviesListComponent,
-    SafePipe,
     MoviesSliderComponent,
     DashboardComponent,
     CollectionComponent,
@@ -48,6 +41,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     ModalModule.forRoot(),
     SharedModule,
+    PipesModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

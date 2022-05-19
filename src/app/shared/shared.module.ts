@@ -4,9 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 
-import { JoinPipe } from '../pipes/join.pipe';
-import { DayPipe } from '../pipes/day.pipe';
-
 import { MovieDetailComponent } from '../shared/movie-detail/movie-detail.component';
 import { MovieDetailsCardComponent } from '../shared/movie-details-card/movie-details-card.component';
 import { GoldenTextComponent } from '../shared/golden-text/golden-text.component';
@@ -16,6 +13,7 @@ import { MoviesGridComponent } from '../shared/movies-grid/movies-grid.component
 import { ShowtimesComponent } from '../shared/showtimes/showtimes.component';
 import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 const sharedComponents = [
   MovieDetailComponent,
@@ -27,8 +25,6 @@ const sharedComponents = [
   ShowtimesComponent,
   NavbarComponent,
   FooterComponent,
-  JoinPipe,
-  DayPipe,
 ];
 
 @NgModule({
@@ -42,6 +38,7 @@ const sharedComponents = [
     CommonModule,
     ModalModule.forChild(),
     RouterModule,
+    PipesModule,
   ],
 })
 export class SharedModule { }
