@@ -29,6 +29,7 @@ import { ManageShowtimesComponent } from './components/manage-showtimes/manage-s
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VerticalBarChartComponent } from './components/charts/vertical-bar-chart/vertical-bar-chart.component';
 import { NumberChartComponent } from './components/charts/number-chart/number-chart.component';
+import { MovieDetailsCardComponent } from './components/movie-details-card/movie-details-card.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NumberChartComponent } from './components/charts/number-chart/number-ch
     CollectionComponent,
     ManageShowtimesComponent,
     VerticalBarChartComponent,
-    NumberChartComponent
+    NumberChartComponent,
+    MovieDetailsCardComponent
   ],
   imports: [
     BrowserModule,
