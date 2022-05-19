@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { DatabaseService } from './../../service/database.service';
 
 @Component({
   selector: 'bmc-manage-showtimes',
   templateUrl: './manage-showtimes.component.html',
-  styleUrls: ['./manage-showtimes.component.sass']
+  styleUrls: ['./manage-showtimes.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ManageShowtimesComponent implements OnInit {
+export class ManageShowtimesComponent {
 
-  constructor() { }
+  movies$ = this.db.getMovies(100);
 
-  ngOnInit(): void {
-  }
+  constructor(
+    private db: DatabaseService,
+  ) { }
 
 }

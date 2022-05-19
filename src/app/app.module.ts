@@ -69,6 +69,6 @@ import { GoldenTextComponent } from './components/golden-text/golden-text.compon
     NgxChartsModule,
   ],
   providers: [DatabaseService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

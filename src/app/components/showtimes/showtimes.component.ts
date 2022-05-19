@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChange, SimpleChanges, OnChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Movie } from '../../models/movie';
 import { DatabaseService } from '../../service/database.service';
 import { ShowtimeDate } from 'src/app/models/showtime-date';
@@ -17,6 +17,7 @@ export class ShowtimesComponent implements OnInit, OnChanges {
 
   constructor(
     private db: DatabaseService,
+    private cd: ChangeDetectorRef,
   ) { }
 
   ngOnInit() {
@@ -25,13 +26,17 @@ export class ShowtimesComponent implements OnInit, OnChanges {
 
   getShowtimes() {
     this.db.getMovieShowtimes(this.movie, this.filterDate, this.showAllTimes).subscribe(
-      (showtimes) => this.showtimes = showtimes
+      (showtimes) => {
+        this.showtimes = showtimes;
+        this.cd.detectChanges();
+      }
     )
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['showAllTimes']) {
       this.getShowtimes();
+      this.cd.detectChanges();
     }
   }
 }

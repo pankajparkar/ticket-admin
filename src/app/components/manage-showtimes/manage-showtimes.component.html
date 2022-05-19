@@ -1,1 +1,11 @@
-<p>manage-show-times works!</p>
+<ng-container *ngIf="movies$ | async as movies">
+    <div class="container">
+        <h2>Manage Showtimes</h2>
+        <div class="movie-item" *ngFor="let movie of movies">
+            <bmc-showtimes
+                [movie]="movie"
+                [showAllTimes]="true"
+            ></bmc-showtimes>
+        </div>
+    </div>
+</ng-container>

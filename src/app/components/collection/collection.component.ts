@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/service/database.service';
 
 @Component({
   selector: 'bmc-collection',
   templateUrl: './collection.component.html',
-  styleUrls: ['./collection.component.sass']
+  styleUrls: ['./collection.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CollectionComponent implements OnInit {
 
