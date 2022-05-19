@@ -1,5 +1,5 @@
 import { Movie } from '../../models/movie';
-import { DatabaseService } from './../../service/database.service';
+import { DatabaseService } from '../../services/database.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

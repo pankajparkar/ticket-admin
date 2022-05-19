@@ -1,4 +1,4 @@
-import { DatabaseService } from './../../service/database.service';
+import { DatabaseService } from '../../services/database.service';
 import { Movie } from '../../models/movie';
 import { Observable, Subject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';

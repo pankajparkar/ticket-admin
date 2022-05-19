@@ -1,5 +1,5 @@
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { DatabaseService } from './../../service/database.service';
+import { DatabaseService } from '../../services/database.service';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 

@@ -1,4 +1,4 @@
-import { InMemoryDataService } from './service/in-memory-data.service';
+import { InMemoryDataService } from './services/in-memory-data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { HomeComponent } from './components/home/home.component';
-import { DatabaseService } from './service/database.service';
+import { DatabaseService } from './services/database.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
