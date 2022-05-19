@@ -23,6 +23,9 @@ import { MoviesSliderComponent } from './component/movies-slider/movies-slider.c
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CollectionComponent } from './components/collection/collection.component';
+import { ManageShowTimesComponent } from './components/manage-show-times/manage-show-times.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { FooterComponent } from './component/footer/footer.component';
     MoviesGridComponent,
     MoviesSliderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    CollectionComponent,
+    ManageShowTimesComponent
   ],
   imports: [
     BrowserModule,
