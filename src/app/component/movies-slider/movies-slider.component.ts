@@ -3,7 +3,7 @@ import { DatabaseService } from './../../service/database.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-movies-slider',
+  selector: 'bmc-movies-slider',
   templateUrl: './movies-slider.component.html',
   styleUrls: ['./movies-slider.component.sass']
 })

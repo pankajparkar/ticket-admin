@@ -5,7 +5,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-movies-grid',
+  selector: 'bmc-movies-grid',
   templateUrl: './movies-grid.component.html',
   styleUrls: ['./movies-grid.component.sass']
 })

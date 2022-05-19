@@ -2,7 +2,7 @@ import { FilterDate } from './../../interface/filter-date';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-movies',
+  selector: 'bmc-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.sass']
 })

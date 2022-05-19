@@ -4,7 +4,7 @@ import { DatabaseService } from '../../service/database.service';
 import { ShowtimeDate } from 'src/app/interface/showtime-date';
 
 @Component({
-  selector: 'app-showtimes',
+  selector: 'bmc-showtimes',
   templateUrl: './showtimes.component.html',
   styleUrls: ['./showtimes.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,

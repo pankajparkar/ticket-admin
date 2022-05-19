@@ -5,7 +5,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-movies-list',
+  selector: 'bmc-movies-list',
   templateUrl: './movies-list.component.html',
   styleUrls: ['./movies-list.component.sass']
 })
