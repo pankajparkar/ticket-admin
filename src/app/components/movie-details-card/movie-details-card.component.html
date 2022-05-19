@@ -23,6 +23,7 @@
                     <dd>{{ movie.runtime | minute }}</dd>
                 </dl>
             </div>
+            <ng-content></ng-content>
             <ng-container *ngIf="showShowtimes">
                 <bmc-showtimes [movie]="movie" [showAllTimes]="showAllTimes" [filterDate]="'all'"></bmc-showtimes>
 

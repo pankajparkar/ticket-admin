@@ -79,7 +79,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '02/01/2019',
           end_date: '04/01/2019',
           runtime: 104,
-          mpaa: 'PG'
+          mpaa: 'PG',
+          revenue: 50000
         },
         {
           id: 2,
@@ -97,7 +98,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '02/05/2019',
           end_date: '04/05/2019',
           runtime: 132,
-          mpaa: 'PG-13'
+          mpaa: 'PG-13',
+          revenue: 40000
         },
         {
           id: 3,
@@ -121,7 +123,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '01/18/2019',
           end_date: '03/18/2019',
           runtime: 129,
-          mpaa: 'PG-13'
+          mpaa: 'PG-13',
+          revenue: 30000
         },
         {
           id: 4,
@@ -145,7 +148,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '12/21/2018',
           end_date: '03/12/2019',
           runtime: 143,
-          mpaa: 'PG-13'
+          mpaa: 'PG-13',
+          revenue: 20000
         },
         {
           id: 5,
@@ -169,7 +173,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '12/21/2018',
           end_date: '03/12/2019',
           runtime: 130,
-          mpaa: 'PG'
+          mpaa: 'PG',
+          revenue: 15000
         },
         {
           id: 6,
@@ -187,7 +192,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '11/16/2018',
           end_date: '03/16/2019',
           runtime: 130,
-          mpaa: 'PG-13'
+          mpaa: 'PG-13',
+          revenue: 12000
         },
         {
           id: 7,
@@ -204,7 +210,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '11/21/2018',
           end_date: '02/21/2019',
           runtime: 112,
-          mpaa: 'PG'
+          mpaa: 'PG',
+          revenue: 11000
         },
         {
           id: 8,
@@ -222,7 +229,8 @@ export class InMemoryDataService implements InMemoryDbService {
           start_date: '01/04/2019',
           end_date: '04/01/2019',
           runtime: 99,
-          mpaa: 'PG-13'
+          mpaa: 'PG-13',
+          revenue: 10000
         }
       ],
       showtimes: [

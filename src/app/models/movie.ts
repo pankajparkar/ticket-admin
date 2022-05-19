@@ -14,4 +14,5 @@ export interface Movie {
   end_date: string;
   runtime: number;
   mpaa: string;
+  revenue: number;
 }

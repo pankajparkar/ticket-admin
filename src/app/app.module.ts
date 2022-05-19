@@ -30,6 +30,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VerticalBarChartComponent } from './components/charts/vertical-bar-chart/vertical-bar-chart.component';
 import { NumberChartComponent } from './components/charts/number-chart/number-chart.component';
 import { MovieDetailsCardComponent } from './components/movie-details-card/movie-details-card.component';
+import { GoldenTextComponent } from './components/golden-text/golden-text.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { MovieDetailsCardComponent } from './components/movie-details-card/movie
     ManageShowtimesComponent,
     VerticalBarChartComponent,
     NumberChartComponent,
-    MovieDetailsCardComponent
+    MovieDetailsCardComponent,
+    GoldenTextComponent,
   ],
   imports: [
     BrowserModule,

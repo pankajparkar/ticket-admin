@@ -5,7 +5,12 @@
             <bmc-movie-details-card
                 [movie]="movie"
                 [showShowtimes]="false"
-            ></bmc-movie-details-card>
+            >
+            <bmc-golden-text
+                label="Revenue"
+                [text]="(movie.revenue | currency: 'USD': 'symbol': '1.0-0')!">
+            </bmc-golden-text>
+        </bmc-movie-details-card>
         </div>
     </div>
 </ng-container>
