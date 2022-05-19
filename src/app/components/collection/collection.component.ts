@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from 'src/app/service/database.service';
 
 @Component({
   selector: 'bmc-collection',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionComponent implements OnInit {
 
-  constructor() { }
+  movies$ = this.db.getMovies(100);
+
+  constructor(
+    private db: DatabaseService,
+  ) { }
 
   ngOnInit(): void {
   }

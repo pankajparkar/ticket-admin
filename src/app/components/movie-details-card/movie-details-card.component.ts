@@ -12,6 +12,7 @@ export class MovieDetailsCardComponent implements OnInit {
   showAllTimes = false;
 
   @Input() movie!: Movie;
+  @Input() showShowtimes = true;
 
   @Output() open = new EventEmitter<any>();
   @Output() close = new EventEmitter();
@@ -20,12 +21,10 @@ export class MovieDetailsCardComponent implements OnInit {
     private sanitizer: DomSanitizer,
   ) { }
 
-  // show all showtimes
   showAllShowtimes(): void {
     this.showAllTimes = true;
   }
 
-  // hide all showtimes
   hideAllShowtimes(): void {
     this.showAllTimes = false;
   }

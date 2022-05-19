@@ -1,1 +1,11 @@
-<p>collection works!</p>
+<ng-container *ngIf="movies$ | async as movies">
+    <div class="container">
+        <h2>Collection By Movies</h2>
+        <div class="movie-item" *ngFor="let movie of movies">
+            <bmc-movie-details-card
+                [movie]="movie"
+                [showShowtimes]="false"
+            ></bmc-movie-details-card>
+        </div>
+    </div>
+</ng-container>

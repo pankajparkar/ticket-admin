@@ -23,14 +23,15 @@
                     <dd>{{ movie.runtime | minute }}</dd>
                 </dl>
             </div>
+            <ng-container *ngIf="showShowtimes">
+                <bmc-showtimes [movie]="movie" [showAllTimes]="showAllTimes" [filterDate]="'all'"></bmc-showtimes>
 
-            <bmc-showtimes [movie]="movie" [showAllTimes]="showAllTimes" [filterDate]="'all'"></bmc-showtimes>
-
-            <a href="javascript:void(0)" class="movie-more-showtime" (click)="showAllShowtimes()"
-                *ngIf="!showAllTimes">Show All Showtimes</a>
-
-            <a href="javascript:void(0)" class="movie-today-showtime" (click)="hideAllShowtimes()"
-                *ngIf="showAllTimes">Hide All Showtimes</a>
+                <a href="javascript:void(0)" class="movie-more-showtime" (click)="showAllShowtimes()"
+                    *ngIf="!showAllTimes">Show All Showtimes</a>
+    
+                <a href="javascript:void(0)" class="movie-today-showtime" (click)="hideAllShowtimes()"
+                    *ngIf="showAllTimes">Hide All Showtimes</a>
+            </ng-container>
         </div>
     </div>
 </div>
