@@ -21,6 +21,8 @@ import { MovieSearchComponent } from './component/movie-search/movie-search.comp
 import { MoviesGridComponent } from './component/movies-grid/movies-grid.component';
 import { MoviesSliderComponent } from './component/movies-slider/movies-slider.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     SafePipe,
     MovieSearchComponent,
     MoviesGridComponent,
-    MoviesSliderComponent
+    MoviesSliderComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
