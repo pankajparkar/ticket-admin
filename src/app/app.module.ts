@@ -25,7 +25,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CollectionComponent } from './components/collection/collection.component';
-import { ManageShowTimesComponent } from './components/manage-show-times/manage-show-times.component';
+import { ManageShowtimesComponent } from './components/manage-showtimes/manage-showtimes.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { ManageShowTimesComponent } from './components/manage-show-times/manage-
     FooterComponent,
     DashboardComponent,
     CollectionComponent,
-    ManageShowTimesComponent
+    ManageShowtimesComponent
   ],
   imports: [
     BrowserModule,

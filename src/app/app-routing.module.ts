@@ -3,12 +3,22 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { MoviesComponent } from './components/movies/movies.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CollectionComponent } from './components/collection/collection.component';
+import { ManageShowtimesComponent } from './components/manage-showtimes/manage-showtimes.component';
+
+// const routes: Routes = [
+//   { path: '', redirectTo: '/home', pathMatch: 'full' },
+//   { path: 'home', component: HomeComponent },
+//   { path: 'movies', component: MoviesComponent },
+//   { path: 'movie/:id', component: MovieDetailComponent }
+// ];
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'movies', component: MoviesComponent },
-  { path: 'movie/:id', component: MovieDetailComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'collection', component: CollectionComponent },
+  { path: 'manage-showtimes/:id', component: ManageShowtimesComponent }
 ];
 
 @NgModule({
