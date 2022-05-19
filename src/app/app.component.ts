@@ -20,6 +20,6 @@ export class AppComponent {
   navLinks: NavLink[] = [
     { link: '/', name: 'Dashboard' },
     { link: '/collection', name: '$ Collection' },
-    { link: '/manage-show-times', name: '$ Collection' },
+    { link: '/manage-showtimes', name: 'Manage Showtimes' },
   ]
 }
