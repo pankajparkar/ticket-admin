@@ -7,8 +7,9 @@ import { NavLink } from './models/navlink.model';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  // title = 'Angular-Cinema';
 
+  // TODO: uncomment for movie app
+  // title = 'Angular-Cinema';
   // navLinks: NavLink[] = [
   //   { link: '/', name: 'Home' },
   //   { link: '/movies', name: 'Movies' },

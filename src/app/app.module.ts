@@ -26,6 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { ManageShowtimesComponent } from './components/manage-showtimes/manage-showtimes.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ManageShowtimesComponent } from './components/manage-showtimes/manage-s
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    NgxChartsModule,
   ],
   providers: [DatabaseService],
   bootstrap: [AppComponent]

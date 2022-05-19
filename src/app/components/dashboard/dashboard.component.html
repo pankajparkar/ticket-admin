@@ -1,4 +1,12 @@
 <div class="container">
-    <h2 class="mt-10 mt-10">Top Movies</h2>
-    <bmc-movies-grid [limit]="8" [columns]="4"></bmc-movies-grid>
+    <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="single"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [customColors]="customColors"
+        [legend]="showLegend">
+  </ngx-charts-bar-vertical>
 </div>
