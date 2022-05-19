@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'collection', component: CollectionComponent },
-  { path: 'manage-showtimes', component: ManageShowtimesComponent }
+  { path: 'manage-showtimes', component: ManageShowtimesComponent },
+  { path: 'movie/:id', component: MovieDetailComponent },
 ];
 
 @NgModule({
