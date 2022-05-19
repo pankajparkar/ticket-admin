@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 
-import { JoinPipe } from '../pipe/join.pipe';
-import { DayPipe } from '../pipe/day.pipe';
+import { JoinPipe } from '../pipes/join.pipe';
+import { DayPipe } from '../pipes/day.pipe';
 
 import { MovieDetailComponent } from '../shared/movie-detail/movie-detail.component';
 import { MovieDetailsCardComponent } from '../shared/movie-details-card/movie-details-card.component';
