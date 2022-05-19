@@ -1,6 +1,6 @@
-import { HomeComponent } from './component/home/home.component';
-import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
-import { MoviesComponent } from './component/movies/movies.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { MoviesComponent } from './components/movies/movies.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
