@@ -16,7 +16,11 @@ export class MoviesListComponent implements OnInit, OnChanges {
   modalRef: BsModalRef | undefined;
   previewUrl = '';
 
-  constructor(private db: DatabaseService, private modalService: BsModalService, private sanitizer: DomSanitizer) { }
+  constructor(
+    private db: DatabaseService,
+    private modalService: BsModalService,
+    private sanitizer: DomSanitizer,
+  ) { }
 
   ngOnInit() {
     this.getMovies();
@@ -30,7 +34,10 @@ export class MoviesListComponent implements OnInit, OnChanges {
 
   // get playing movie based on filter date
   getMovies(): void {
-    this.db.getNowPlayingMovies(this.filterDate).subscribe(movies => this.movies = movies);
+    this.db.getNowPlayingMovies(this.filterDate).subscribe(movies => {
+      this.movies = movies;
+      movies.length = 1;
+    });
   }
 
   // show all showtimes
