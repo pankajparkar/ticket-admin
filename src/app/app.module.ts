@@ -1,17 +1,13 @@
-import { InMemoryDataService } from './services/in-memory-data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { HomeComponent } from './components/home/home.component';
-import { DatabaseService } from './services/database.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
+import { InMemoryDataService, DatabaseService } from 'ticket-booking-library';
 import { MoviesSliderComponent } from './components/movies-slider/movies-slider.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -20,15 +16,11 @@ import { ManageShowtimesComponent } from './components/manage-showtimes/manage-s
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VerticalBarChartComponent } from './components/charts/vertical-bar-chart/vertical-bar-chart.component';
 import { NumberChartComponent } from './components/charts/number-chart/number-chart.component';
-import { SharedModule } from './shared/shared.module';
-import { PipesModule } from './pipes/pipes.module';
+import { SharedModule, PipesModule } from 'ticket-booking-library';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoviesComponent,
-    HomeComponent,
-    MoviesListComponent,
     MoviesSliderComponent,
     DashboardComponent,
     CollectionComponent,

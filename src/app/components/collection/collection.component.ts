@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { DatabaseService } from 'src/app/services/database.service';
+import { DatabaseService } from 'ticket-booking-library';
 
 @Component({
   selector: 'bmc-collection',

@@ -1,5 +1,4 @@
-import { Movie } from '../../models/movie';
-import { DatabaseService } from '../../services/database.service';
+import { DatabaseService } from 'ticket-booking-library';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
