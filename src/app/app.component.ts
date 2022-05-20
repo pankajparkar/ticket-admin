@@ -8,13 +8,6 @@ import { NavLink } from './models/navlink.model';
 })
 export class AppComponent {
 
-  // TODO: uncomment for movie app
-  // title = 'Angular-Cinema';
-  // navLinks: NavLink[] = [
-  //   { link: '/', name: 'Home' },
-  //   { link: '/movies', name: 'Movies' },
-  // ]
-
   title = 'Ticket Admin';
 
   navLinks: NavLink[] = [
